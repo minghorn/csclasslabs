@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>activity2</label>
+	</settings>
+	<users>
+		<user>
+			<path>activity2.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>activity2.jcp</path>
+		</project>
+	</projects>
+</workspace>

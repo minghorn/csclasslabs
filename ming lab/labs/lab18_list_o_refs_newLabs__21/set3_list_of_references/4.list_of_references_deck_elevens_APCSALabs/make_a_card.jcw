@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>make_a_card</label>
+	</settings>
+	<users>
+		<user>
+			<path>make_a_card.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>make_a_card.jcp</path>
+		</project>
+	</projects>
+</workspace>
