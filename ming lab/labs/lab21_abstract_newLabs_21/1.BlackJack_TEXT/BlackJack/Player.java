@@ -18,7 +18,5 @@ public class Player extends AbstractPlayer{
 
 
 
-
-
     //hit method goes here
 }
