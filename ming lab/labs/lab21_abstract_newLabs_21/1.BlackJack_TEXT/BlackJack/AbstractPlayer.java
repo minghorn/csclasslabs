@@ -12,9 +12,7 @@ public abstract class AbstractPlayer implements Playerable
     }
     //methods
     public void resetHand(){
-          for(int i=0; i < hand.size(); i++){
-              hand.remove(i);
-          }
+          hand.clear();
     }
     
     //set methods
@@ -22,7 +20,7 @@ public abstract class AbstractPlayer implements Playerable
         hand.add(card);
     }
     public void setWinCount(int numWins){
-        winCount = numWins;
+        winCount += numWins;
     }
     
     //get methods

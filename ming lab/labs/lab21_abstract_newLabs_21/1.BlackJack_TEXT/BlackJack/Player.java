@@ -19,7 +19,7 @@ public class Player extends AbstractPlayer{
     //hit method goes here
     public boolean hit(){
        String bool = in.next();
-       if(bool.substring(0,1).equals("t") || bool.substring(0,1).equals("T")){
+       if(bool.substring(0,1).equals("y") || bool.substring(0,1).equals("Y")){
            return true;
         }
        return false;

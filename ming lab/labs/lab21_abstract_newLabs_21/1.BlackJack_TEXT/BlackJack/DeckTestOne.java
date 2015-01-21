@@ -12,19 +12,6 @@ public class DeckTestOne
     public static void main( String args[] )
     {
         Deck deck = new Deck();
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");
-        System.out.println("hello");    
-        System.out.println("hello");
-        System.out.println("hello");
-        for(int i = 0; i < deck.size(); i++){
-            System.out.println(deck.nextCard());
-        }
+        
     }
 }

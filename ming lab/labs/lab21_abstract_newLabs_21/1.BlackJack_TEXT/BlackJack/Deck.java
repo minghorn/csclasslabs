@@ -41,14 +41,13 @@ public class Deck
     //modifiers
    public void shuffle()
     {
+        int j = 0;
          for(int i = 0; i < 52; i++){
             duplicated.add(stackOfCards.get(i));
            }
         for(int i = 0; i < 51;){
             int x = random.nextInt(duplicated.size());
-            System.out.println(x);
             Card y = duplicated.get(x);
-            int j = 0;
             stackOfCards.set(j, y);
             duplicated.remove(x);
             i++;
@@ -72,10 +71,8 @@ public class Deck
     public Card nextCard(){
        if(topCardIndex < 52){
            topCardIndex++;
-           
         }
        return stackOfCards.get(topCardIndex);
-       
     }
 
     public String toString()
