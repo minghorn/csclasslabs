@@ -44,14 +44,15 @@ public class Deck
          for(int i = 0; i < 52; i++){
             duplicated.add(stackOfCards.get(i));
            }
-        for(int i = 51; i > 1; ){
-            int x = random.nextInt(i);
+        for(int i = 0; i < 51;){
+            int x = random.nextInt(duplicated.size());
+            System.out.println(x);
             Card y = duplicated.get(x);
-            for(int j = 0; j < 52; j++){
-                stackOfCards.set(j, y);
-               }
+            int j = 0;
+            stackOfCards.set(j, y);
             duplicated.remove(x);
-            i--;
+            i++;
+            j++;
            }
         //shuffle the deck
         //reset variables as needed
@@ -69,10 +70,12 @@ public class Deck
     }
 
     public Card nextCard(){
-       if(topCardIndex < 50){
+       if(topCardIndex < 52){
            topCardIndex++;
+           
         }
-       return stackOfCards.get(topCardIndex);  
+       return stackOfCards.get(topCardIndex);
+       
     }
 
     public String toString()
