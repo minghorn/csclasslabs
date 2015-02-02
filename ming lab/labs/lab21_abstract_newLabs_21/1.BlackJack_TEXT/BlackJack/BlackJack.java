@@ -12,13 +12,14 @@ public class BlackJack
 {
     private ArrayList<Playerable> players;
     private Dealer dealer = new Dealer();
-    private ArrayList<int> winners = new ArrayList<int>();
+    private ArrayList<Integer> winners = new ArrayList<Integer>();
     private Scanner in = new Scanner(System.in);
+    private ArrayList<Integer> playerTotals;
 
     public BlackJack()
     {
        players = new ArrayList<Playerable>();
-       ArrayList<int> playerTotals = new ArrayList<int>();
+       playerTotals = new ArrayList<Integer>();
        System.out.println("How many players?");
        int play = in.nextInt();
        players.add(dealer);
