@@ -34,31 +34,40 @@ public class BlackJack
             players.get(i).addCardToHand(dealer.deal());
         }
         for(int i = players.size()-1; i > -1; i--){
-           Player currentPlayer = players.get(i);
            System.out.println("Player " + i + " turn");
-           System.out.println(currentPlayer.toString());
-           while(currentPlayer.getHandValue() < 21){
+           System.out.println(players.get(i).toString());
+           while(players.get(i).getHandValue() < 21){
                System.out.println("Hit? y or n");
                if(in.next().equals("y")){
-                   currentPlayer.addCardToHand(dealer.deal());
-                   System.out.println(currentPlayer.toString());
+                   players.get(i).addCardToHand(dealer.deal());
+                   System.out.println(players.get(i).toString());
+                }
+               else{
+                   break;
                 }
             }
         }
         for(int i = 0; i < players.size(); i++){
             System.out.println("Player " + i + " hand value:" + players.get(i).getHandValue());
         }
-        Player winner = players.get(0);
-        for(int i = 0; i < players.size(); i++){
-            Player current = players.get(i);
-            if(winner.getHandValue() > 21){
-                winner = players.get(i+1);
+        Player winner = (Player)players.get(1);
+        for(int i = 1; i < players.size(); i++){
+            Player current = (Player) players.get(i);
+            while(winner.getHandValue() > 21){
+                int j = 1;
+                winner = (Player)players.get(j);
+                j++;
             }
             if(current.getHandValue() > winner.getHandValue() && current.getHandValue() <= 21){
                 winner = current;
             }
         }
-        winner.setWinCount(1);
+        if(winner.getHandValue() > players.get(0).getHandValue() || players.get(0).getHandValue() > 21){
+            winner.setWinCount(1);
+        }
+        else{
+            players.get(0).setWinCount(1);
+        }
         for(int i = 0; i < players.size(); i++){
             System.out.println("Player "+ i + "win count: " + players.get(i).getWinCount());
         }
